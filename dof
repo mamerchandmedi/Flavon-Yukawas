@@ -1,9 +1,0 @@
-
-####This code uses an interpoaltion function for the number of degrees of freedom as function of temperature
-###Data is obtained from https://member.ipmu.jp/satoshi.shirai/EOS2018
-data = np.loadtxt( 'satoshi_dof.dat' )
-Temperature_d=(data.T)[0][900:3900]
-dof_d=(data.T)[1][900:3900]
-#f = interpolate.interp1d(Temperature_d, dof_d)###"""the function works from T=[10e-4,1000]"""
-g_star = interpolate.interp1d(Temperature_d, dof_d, kind='cubic')
-
